@@ -1,0 +1,46 @@
+<html>
+
+    <head>
+      <script type=text/javascript>
+
+          //*** get contact info
+          function init(){
+
+             var size = prompt("Enter number of contacts:");
+
+             // dynamic allocation
+             contacts = new Array(size);
+
+             for (i=0; i<size; i++){
+                contacts[i] = new Object();
+                contacts[i].name = prompt("Enter contact " + i + " Name:");
+                contacts[i].phone = prompt("Enter contact " + i + " Phone:");
+                contacts[i].email = prompt("Enter contact " + i + " email:");
+             }
+
+             display(contacts);
+          }
+
+          //*** dynamically create an html table
+          function display(contacts){
+
+              document.write("<html><body>");
+              document.write("<table border=1 width=400 align=center>");
+
+              document.write("<tr bgcolor=orange><th>Name</th><th>Phone</th><th>email</th></tr>");
+              for (i=0; i<contacts.length; i++)
+                 document.write("<tr><td>" + contacts[i].name   + "</td><td>"
+                                           + contacts[i].phone + "</td><td>"
+                                           + contacts[i].email  + "</td></tr>");
+
+              document.write("</table>");
+              document.write("</body></html>");
+          }
+
+      </script>
+   </head>
+
+<body onLoad="init();">
+</body>
+
+</html>
