@@ -31,11 +31,11 @@ int main() {
    Contacts* contacts = new Contacts[size];
 
    for (i=0; i<size; i++){
-	      cout << "Enter Contact element " << i << ": ";
+	      cout << "Enter Contact Name " << i << ": ";
           cin  >> contacts[i].name;
-          cout << "Enter Contact element " << i << ": ";
+          cout << "Enter Contact Phone " << i << ": ";
           cin  >> contacts[i].phone;
-          cout << "Enter Contact element " << i << ": ";
+          cout << "Enter Contact email " << i << ": ";
           cin  >> contacts[i].email;
    }
 
@@ -52,7 +52,5 @@ void display(Contacts* array, int n) {
 	int i;
 
 	for (i=0; i<n; i++)
-	   cout << "Contact[" << i << "]="  << array[i].name << " " << array[i].phone <<" " << array[i].email << "\n";
-//       cout << "Contact[" << i << "]="  << array[i].phone << " ";
-//       cout << "Contact[" << i << "]="  << array[i].email << "\n";
+	   cout << "Contact[" << i << "]=\n"  << array[i].name << " " << array[i].phone <<" " << array[i].email << "\n";
 }

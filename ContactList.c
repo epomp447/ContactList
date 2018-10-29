@@ -28,8 +28,12 @@ int main() {
    contacts = calloc (size, sizeof(contact_type));
 
    for (i=0; i<size; i++){
-          printf("Enter student[%d] name, phone number, email: ", i);
-          scanf("%s %s %s", &contacts[i].name, &contacts[i].phone, &contacts[i].email);
+          printf("Enter contact[%d] name: ", i);
+          scanf("%s", &contacts[i].name);
+          printf("Enter contact[%d] phone number: ", i);
+          scanf("%s", &contacts[i].phone);
+          printf("Enter contact[%d] email: ", i);
+          scanf("%s", &contacts[i].email);
    }
 
    for (i=0; i<size; i++)
