@@ -31,8 +31,10 @@ int main() {
    Contacts* contacts = new Contacts[size];
 
    for (i=0; i<size; i++){
-	      cout << "Enter Contact Name " << i << ": ";
-          cin  >> contacts[i].name;
+	       cout << "Enter Contact Name " << i << ": ";
+          cin.ignore();
+          getline(cin, contacts[i].name, '\n');//Allow for spaces input string
+          //cin  >> contacts[i].name;
           cout << "Enter Contact Phone " << i << ": ";
           cin  >> contacts[i].phone;
           cout << "Enter Contact email " << i << ": ";
