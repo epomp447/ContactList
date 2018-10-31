@@ -5,16 +5,15 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-
-
 /* ********************************* */
 int main() {
 
    /* size of structure unknown at compile time */
    typedef struct  {
-      char   name[50];
+      char fname[50];
+      char lname[50];
       char phone[12];
-      char  email[50];
+      char email[50];
    } contact_type;
 
    int  i, size;
@@ -28,8 +27,10 @@ int main() {
    contacts = calloc (size, sizeof(contact_type));
 
    for (i=0; i<size; i++){
-          printf("Enter contact[%d] name: ", i);
-          scanf("%s", &contacts[i].name);
+          printf("Enter contact[%d] First Name: ", i);
+          scanf("%s", &contacts[i].fname);
+          printf("Enter contact[%d] Last Name: ", i);
+          scanf("%s", &contacts[i].lname);
           printf("Enter contact[%d] phone number: ", i);
           scanf("%s", &contacts[i].phone);
           printf("Enter contact[%d] email: ", i);
@@ -37,7 +38,7 @@ int main() {
    }
 
    for (i=0; i<size; i++)
-          printf("%s %s %s\n", contacts[i].name, contacts[i].phone, contacts[i].email);
+          printf("%s %s %s %s\n", contacts[i].fname, contacts[i].lname, contacts[i].phone, contacts[i].email);
 
    /* deallocate the array */
    free(contacts);
