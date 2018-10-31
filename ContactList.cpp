@@ -2,18 +2,16 @@
   g++ ContactList.cpp -o ContactList
 */
 
-
 /* this preprocessing directive is needed for basic I/O routines */
 #include <iostream>
 using namespace std;
 
 struct Contacts
 {
-	string fname;
+   string fname;
    string lname;
-	string phone;
+   string phone;
    string email;
-	
 };
 // function prototyping
 void display(Contacts*, int);
